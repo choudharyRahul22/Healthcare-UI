@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <app-nav-bar></app-nav-bar>
+  <router-outlet></router-outlet>
+</div>
+
+<hr>
+<h3>Timer for 5 seconds</h3>
+<p><strong>{{idleState}}</strong></p>
+<p *ngIf="lastPing"><small>Last keepalive ping <strong>{{lastPing | amTimeAgo}}</strong></small></p>
+<button (click)="reset()" *ngIf="timedOut">Restart</button>
+
